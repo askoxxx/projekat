@@ -1,0 +1,196 @@
+/*IMPORT FONTOVA*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*IMPORT KRAJ*/
+
+/*GLOBALNI*/
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*GLOBALNI KRAJ*/
+
+/*HEADER*/
+.top {
+	width: 100%;
+	background-color: #345AAA;
+	color:white;
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+}
+
+#logo {
+	width: 200px;
+    height: auto;
+    position: relative;
+	top: 20px;
+	left: 100px;
+}
+
+.glava {
+	height: 100px;
+	width: 100%;
+	padding: 1px 0;
+    background: url(../images/meni2.jpg);
+    background-image: url(../images/meni2.jpg);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: cover;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.glava nav {
+	float: right;
+}
+
+
+nav ul li {
+	display: inline-block;
+	margin: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+}
+
+nav ul li a:hover {
+	background-color: #112b64;
+	opacity: .5;
+}
+
+
+/*HEADER KRAJ*/
+
+/*FORMA*/
+
+.header {
+	width: 30%;
+	margin: 40px auto 0px;
+	color: white;
+	background-color:  #345AAA;
+	text-align: center;
+	border: 1px solid #B0C4DE;
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+	padding: 10px 20px;
+}
+
+form, .content {
+	width: 30%;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid #B0C4DE;
+	background: white;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.input-group {
+	margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+	display: block;
+	text-align: left;
+	margin: 3px;
+}
+
+.input-group input {
+	height: 25px;
+	width: 93%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+#user_type {
+	height: 40px;
+	width: 98%;
+	padding: 5px 10px;
+	background: white;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+.btn {
+	height: 40px;
+	width: 100%;
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background-color:  #345AAA;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+.btn:hover {
+	opacity: .5;
+}
+
+.error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}
+.success {
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	margin-bottom: 20px;
+}
+
+.user_commands form {
+	margin: 0;
+	width: 100%;
+	padding: 0;
+}
+
+/*FORMA KRAJ*/
+
+
+
+/*FOOTER*/
+
+footer {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	top: 200px;
+	background-color: #345AAA;
+
+}
+
+/*FOOTER KRAJ*/
+
+/*BUTTONS U KORISNICKOM PROFILU*/
+
+.user_commands button {
+	display: block;
+	width: 100%;
+}
+
+/*BUTTONS KRAJ*/
+
+/*HEADER ZA PRIKAZ INFO-ISPITA*/
+#database_content h1 {
+	text-align: center;
+	color: #a94442;
+}
+
+
+/*KRAJ*/
