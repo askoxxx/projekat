@@ -1,0 +1,81 @@
+
+DROP TABLE IF EXISTS users_ispiti;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS ispiti;
+
+
+
+create table users (
+	id int auto_increment,
+    first_name varchar(100),
+    last_name varchar(100),
+    username varchar(100),
+    password varchar(100),
+    email varchar(100),
+    user_type varchar(100),
+    activated varchar(100),
+    PRIMARY KEY(id)
+);
+
+create table ispiti (
+	id int auto_increment,
+    naziv varchar(100),
+    skracenica varchar(100),
+    semestar varchar(100),
+    godina int,
+    PRIMARY KEY(id)
+);
+
+create table users_ispiti (
+	id_user int,
+    id_ispit int,
+	FOREIGN KEY (id_user) REFERENCES users(id)
+		ON DELETE CASCADE,
+	FOREIGN KEY (id_ispit) REFERENCES ispiti(id)
+		ON DELETE CASCADE
+);
+
+INSERT INTO users(first_name, last_name, username, password, email, user_type, activated)
+VALUES("Admin", "Administrator", "admin", "202cb962ac59075b964b07152d234b70", "admin@gmail.com", "admin", "true"),
+      ("Emir", "Hadziomerovic", "emir", "202cb962ac59075b964b07152d234b70", "emir@gmail.com", "", "true"),
+      ("Semso", "Semsic", "semso", "202cb962ac59075b964b07152d234b70", "semso@gmail.com", "", "true"),
+      ("Meho", "Mehic", "meho", "202cb962ac59075b964b07152d234b70", "meho@gmail.com", "", "true"),
+      ("Jovo", "Jovic", "jovo", "202cb962ac59075b964b07152d234b70", "jovo@gmail.com", "", "true"),
+      ("Selma", "Selmic", "selma", "202cb962ac59075b964b07152d234b70", "selma@gmail.com", "", "true"),
+      ("Nadina", "Nadic", "nadina", "202cb962ac59075b964b07152d234b70", "nadina@gmail.com", "", "true"),
+      ("Hazim", "Hazic", "hazim", "202cb962ac59075b964b07152d234b70", "hazim@gmail.com", "", "true"),
+      ("Mujo", "Mujic", "mujo", "202cb962ac59075b964b07152d234b70", "mujo@gmail.com", "", "true"),
+      ("Lejla", "Lejlic", "lejla", "202cb962ac59075b964b07152d234b70", "lejla@gmail.comcom", "", "false");
+      
+
+INSERT INTO ispiti(naziv, skracenica, semestar, godina)
+VALUE("Uvod u programiranje", "UP", "zimski", 1),
+     ("Operativni sistemi", "OS", "ljetni", 1),
+     ("Programski jezici", "PJ", "zimski", 2),
+     ("Baze podataka", "BP", "ljetni", 2),
+     ("Web programiranje", "WP", "zimski", 3),
+     ("Web dizajn", "WD", "zimski", 2),
+     ("Razvoj softvera", "RS", "zimski", 1),
+     ("Funkcionalno programiranje", "FP", "zimski", 3),
+     ("Objektno programiranje", "OP", "ljetni", 2),
+     ("Tehnike programiranje", "TP", "zimski", 3),
+     ("Razvoj mobilnih aplikacija", "RMA", "zimski", 1),
+     ("Algoritmi i strukture podataka", "AISP", "zimski", 1),
+     ("Matematika 1", "M1", "zimski", 1),
+     ("Matematika 2", "M2", "ljetni", 1),
+     ("Matematika 3", "M3", "zimski", 2),
+     ("Racunarske mreže", "RM", "zimski", 2),
+     ("Uvod u informacione tehnologije", "UIF", "zimski", 1);
+     
+
+INSERT INTO users_ispiti(id_user, id_ispit)
+VALUES(2,1),
+      (2,2),
+      (2,3),
+      (2,4),
+      (2,5),
+      (3,1),
+      (3,2),
+      (3,3),
+      (3,4),
+      (3,6);
